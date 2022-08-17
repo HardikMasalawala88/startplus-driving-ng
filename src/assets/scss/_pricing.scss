@@ -1,0 +1,76 @@
+.pricing-area{
+    overflow: hidden;
+    background: url(../images/bg-up.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 120px 0 115px;
+    .pricing-item{
+        background: #FFFFFF;
+        border: 1px solid #E5E5E5;
+        box-sizing: border-box;
+        border-radius: 3px;
+        padding: 40px;
+        transition: .5s;        
+        .pricing-texts{
+            h6{
+                font-weight: bold;
+                font-size: 22px;
+                line-height: 37px;
+                border-bottom: 1px solid #E5E5E5;
+                padding-bottom: 18px;
+                transition: .5s;
+            }
+            .basic-price{
+                display: flex;
+                justify-content: center;
+                padding: 20px 0 30px;
+                span{
+                    font-weight: 800;
+                    font-size: 22px;
+                    line-height: 34px;
+                }
+                h1{
+                    font-weight: bold;
+                    font-size: 54px;
+                    line-height: 60px;
+                }
+            }
+            ul{
+                li{
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 38px;
+                    color: #555555;
+                }
+            }
+            .theme-btn{
+                padding: 0 45px;
+                margin-top: 30px;
+                background: #111A39;
+                transition: .5s;
+            }
+        }
+        &:hover{
+            background: #fff;
+            box-shadow: 0px 20px 50px rgba(17, 26, 57, 0.03);
+            border-radius: 3px;
+            border-color: transparent;
+            .pricing-texts{
+                h6{
+                    color: #E81D4F;
+                }
+                .theme-btn{
+                    background: #E81D4F;
+                }
+            }
+        }
+    } 
+}
+
+.h3-page{
+    background: url(../images/bg-down.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding-bottom: 115px;
+}

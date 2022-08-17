@@ -1,0 +1,92 @@
+.features-area{
+    background: url(../images/bg-down.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    padding: 120px 0 95px;
+    overflow: hidden;
+    .feature-items{
+        padding: 37px 29px;
+        background: #fff;
+        margin-bottom: 24px;
+        border: 1px solid #E5E5E5;
+        box-sizing: border-box;
+        border-radius: 3px;
+        transition: 0.5s;
+        .feature-icon{
+            position: relative;
+            .rode-with{
+                font-size: 50px;
+                position: absolute;
+                display: block;
+                top: 25px;
+                left: 0;
+                right: 0;
+                color: #FFFFFF;
+                z-index: 9;
+            }
+            .shape-one{
+                svg{
+                    path{
+                        fill: #989EB3;
+                        transition: .5s;
+                    }
+                }
+            }
+            .shape-two{
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: -5px;
+                svg{
+                    path{
+                        fill: #111A39;
+                        transition: .5s;
+                    }
+                }
+            }
+        }
+        .feature-text{
+            h5{
+                font-weight: bold;
+                font-size: 22px;
+                line-height: 34px;
+                padding: 45px 0 17px;
+                transition: .5s;
+            }
+            p{
+                max-width: 212px;
+                font-weight: normal;
+                margin: 0 auto;
+            }
+        }
+        &:hover{
+            border-color: transparent;
+            background: #FFFFFF;
+            box-shadow: 0px 5px 14px rgba(17, 26, 57, 0.15);
+            border-radius: 3px;
+            .feature-icon{
+                .shape-one{
+                    svg{
+                        path{
+                            fill: #FFA8BF;
+                        }
+                    }
+                    
+                }
+                .shape-two{
+                    svg{
+                        path{
+                            fill: #E81D4F;
+                        }
+                    }
+                }
+            }
+            .feature-text{
+                h5{
+                    color: #E81D4F;
+                }
+            }
+        }
+    }
+}

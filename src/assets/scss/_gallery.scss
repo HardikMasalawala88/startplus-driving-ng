@@ -1,0 +1,76 @@
+// h1-gallery-area======
+.gallery-area{
+    overflow: hidden;
+    background: url(../images/bg-down.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 120px;
+    .title{
+        padding-bottom: 35px;
+    }
+    .geallery-image{
+        position: relative;
+        margin-top: 25px;
+        .geallery-translliet{
+            overflow: hidden;
+            border-radius: 3px;
+            img{
+                width: 100%;
+                max-width: 100%;
+                transition: .5s;
+            }
+        }
+        &::after{
+            content: " ";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            max-width: 100%;
+            background: #E81D4F;
+            opacity: 0;
+            border-radius: 3px;
+            transition: 0.5s;
+        }
+        .geallery-link{
+            a{
+                color: #E81D4F;
+                background: #fff;
+                height: 50px;
+                width: 50px;
+                line-height: 50px;
+                text-align: center;
+                border-radius: 50%;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                display: none;
+                transition: 0.5s;
+                z-index: 2;
+                
+            }
+        }
+        &:hover{
+            .geallery-translliet{
+                img{
+                    transform: scale(1.1);
+                    border-radius: 3px;
+                }
+            }
+            &::after{
+                opacity: 0.5;
+            }
+            .geallery-link{
+                a{
+                    display: block;
+                }
+            }
+        }
+    }
+}
+.slbImageWrap:after{
+    border-radius: 5px;
+}

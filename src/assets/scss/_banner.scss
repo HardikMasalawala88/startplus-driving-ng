@@ -1,0 +1,241 @@
+.banner-area{
+    position: relative;
+    .item{
+        .banner-images{
+            position: relative;
+            img{
+                width: 100%;
+                max-width: 100%;
+                object-fit: cover;
+            }
+            &::after{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                width: 100%;
+                background: rgba(0, 0, 0, 0.6);
+            }
+        }
+        .banner-heading{
+            position: absolute;
+            top: 46%;
+            transform: translate( 0, -46%);
+            h1{
+                font-weight: 800;
+                font-size: 107px;
+                line-height: 120px;
+                max-width: 784px;
+                color: #fff;
+            }
+            p{
+                max-width: 601px;
+                color: #fff;
+                padding-bottom: 30px;
+            }
+            .theme-btn{
+                padding: 0 32px;
+                margin-right: 10px;
+
+            }
+            .btn-two{
+                background: #fff;
+                color: #E81D4F;
+                margin-left: 17px;
+            }
+        }
+        
+    }
+    .owl-nav{
+        display: block !important;
+        .owl-prev{
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+            display: inline-block;
+            border-radius: 50%;
+            font-size: 22px !important;
+            color: #fff !important;
+            background: rgba(255, 255, 255, 0.5) !important;
+            position: absolute;
+            left: 2%;
+            transform: translate(-2%, -50%);
+            top: 50%;
+            transition: .5s;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+                background: #E81D4F !important;
+            }
+        }
+        .owl-next{
+            height: 50px;
+            width: 50px;
+            line-height: 50px;
+            text-align: center;
+            display: inline-block;
+            margin-left: 10px;
+            border-radius: 50%;
+            font-size: 22px !important;
+            color: #fff !important;
+            background: rgba(255, 255, 255, 0.5) !important;
+            position: absolute;
+            right: 2%;
+            transform: translate(-2%, -50%);
+            top: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: .5s;
+            &:hover{
+                background: #E81D4F !important;
+            }
+        }
+    }
+    .owl-dots{
+        display: none !important;
+    }
+}
+
+// home-h2-banner
+.h2-bottom{
+    background: none !important;
+}
+// home-3-banner-area
+.home-3-banner-area{
+    overflow: hidden;
+    background: url(../images/home_three_banner.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 285px 0 215px;
+    .banner-heading{
+        h1{
+            font-weight: 800;
+            font-size: 107px;
+            line-height: 120px;
+            color: #111A39;
+            max-width: 565px;
+        }
+        p{
+            color: #fff;
+            max-width: 601px;
+            font-size: 18px;
+            line-height: 30px;
+            padding-top: 5px;
+        }
+        .theme-btn{
+            margin-top: 30px;
+            padding: 0 31px;
+        }
+        .two{
+            background: #fff;
+            color: #E81D4F;
+            padding: 0 31px;
+            margin-left: 25px;
+            &:hover{
+                color: #fff;
+            }
+        }
+    }
+}
+// baner-bottom area 
+.baner-bottom-form{
+    background: #F3F3F3;
+    padding-bottom: 80px;
+    .banner-bottom{
+        background: #fff;
+        box-shadow: 0px 50px 50px rgba(17, 26, 57, 0.05);
+        border-radius: 3px;
+        height: auto;
+        width: 970px;
+        max-width: 100%;
+        margin: -80px auto;
+        position: relative;
+        z-index: 1;
+        .form-text-left{
+            margin-top: 5px;
+            position: relative;
+            .form-text-img{
+                padding-top: 42px;
+                margin-bottom: 20px;
+                svg{
+                    margin: 0 auto;
+                    display: block;
+                }
+            }
+            span{
+                align-items: center;
+                position: absolute;
+                top: 45%;
+                left: 50%;
+                display: block;
+                color: #fff;
+                font-size: 50px;
+                transform: translate(-50%, -45%);
+            }
+            h6{
+                font-weight: bold;
+                font-size: 22px;
+                line-height: 34px;
+                text-align: center;
+            }
+            p{
+                text-align: center;
+            }
+        }
+        form{
+            padding: 30px;
+            .row{
+                border-left: 1px solid #E81D4F;
+                .form-left{
+                    input{
+                        width: 100%;
+                        font-weight: normal;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #555555;
+                        outline: none;
+                        box-shadow: none;
+                        background: #fff !important;
+                        padding-top: 20px;
+                        margin-bottom: 10px;
+                        border: honeydew;
+                        border-bottom: 1px solid #ddd;
+                    }
+                    .your-name{
+                        margin-bottom: 0;
+                    }
+                    .form-select{
+                        width: 100%;
+                        display: block;
+                        font-weight: normal;
+                        padding-left: 0;
+                        font-size: 16px;
+                        line-height: 24px;
+                        outline: none;
+                        box-shadow: none;
+                        color: #555555;
+                        margin-bottom: 10px;
+                        border: honeydew; 
+                        border-bottom: 1px solid #ddd;
+                        option{
+                            font-size: 16px;
+                            line-height: 24px;
+                            color: #555555;
+                        }
+                    }
+                    .theme-btn{
+                        width: 100%;
+                        height: 40px;
+                        max-width: 100%;
+                        line-height: 40px;
+                    }
+                }
+            }
+        }
+    }
+}

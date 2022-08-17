@@ -1,0 +1,89 @@
+.countdown-area{
+    overflow: hidden;
+    text-align: center;
+    background-color: #F3F3F3;
+    padding: 120px 0;
+    position: relative;
+    display: block;
+    z-index: 1;
+    .countdown-items{
+        .logo{
+            padding-bottom: 30px;
+        }
+        h2{
+            color: #111A39;
+            font-size: 45px;
+            font-weight: bold;
+            margin-bottom: 60px;
+            i{
+                font-size: 45px;
+                font-weight: bold; 
+                color: #E81D4F;
+            }
+        }
+        .countdown{ 
+            .items{
+                display: inline-block;
+                margin:0 70px;
+                color: #111A39;
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 55px;
+                position: relative;
+                span{
+                    display: block;
+                    color: #111A39;
+                    font-size: 80px;
+                    font-weight: bold;
+                    width: 90px;
+                }  
+                &::after{
+                    content: ':';
+                    position: absolute;
+                    display: block; 
+                    font-size: 80px;
+                    line-height: 1;
+                    font-weight: bold;
+                    top: 0;
+                    right: -80px;
+                    color: #E81D4F;
+                }
+                &:last-child{ 
+                    padding-right: 0;
+                    &::after{
+                        display: none;
+                    }
+                }
+            }
+        }
+        p{
+            color: #111A39;
+            padding-top: 50px;
+            font-size: 18px;
+            font-weight: 400;
+        }
+        .input-group{
+            max-width: 550px;
+            margin: 0 auto;
+            margin-top: 40px;
+            border-radius: 30px;
+            background: #fff !important;
+            input{
+                background: none;
+                border: none;
+                box-shadow: none;
+                padding: 10px 5px 10px 30px;
+                font-size: 16px;
+            }
+            a{
+                background: #E81D4F;
+                border-radius: 0 30px 30px 0;
+                width: 100px;
+                font-size: 17px;
+                line-height: 54px;
+                font-weight: 400;
+                color: #fff;
+            }
+        }
+    }
+}

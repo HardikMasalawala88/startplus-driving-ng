@@ -1,0 +1,23 @@
+.cleint-area{
+    overflow: hidden;
+    padding: 100px 0 120px;
+    background: #F3F3F3;
+    .cleint-office-logo{
+        display: flex;
+        justify-content: space-between;
+        .item{
+            img{
+                display: block;
+                max-width: 100%;
+                width: 150px;
+                &:hover{
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+// Index.Html //
+.fast{
+    background-color: #fff;
+}

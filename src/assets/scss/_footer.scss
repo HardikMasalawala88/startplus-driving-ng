@@ -1,0 +1,213 @@
+.footer-area{
+    overflow: hidden;
+    background: url(../images/footer-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    position: relative;
+    .footer-top-item{
+        padding: 110px 0 105px;
+        .footer-img{
+            img{
+                max-width: 100%;
+            }
+        }
+        p{
+            font-weight: normal;
+            color: #FFFFFF; 
+            padding-top: 28px;
+            max-width: 303px;
+            font-size: 18px;
+            line-height: 30px;
+        }
+        .input-group{
+            position: relative;
+            padding-top: 30px;
+            input{
+                outline: none;
+                height: 45px;
+                width: 100%;
+                display: inline-block;
+                background: #fff;
+                border-radius: 5px !important;
+                padding: 0 50px 0 15px;
+                line-height: 30px;
+                font-size: 16px;
+                color: black;
+                border: none;
+                box-shadow: none;
+            }
+            #basic{
+                border: none;
+                box-shadow: none;
+                color: #fff;
+                cursor: pointer;
+                position: absolute;
+                top: 30px;
+                right: -1px;
+                width: 50px;
+                height: 45px;
+                background: #E81D4F;
+                border-radius: 0px 5px 5px 0px;
+                z-index: 9;
+                padding: 5px 0 0 10px;
+                font-size: 24px;
+            } 
+        }
+        .footer-second-item{
+            padding: 15px 0 0 30px;
+            h4{
+                font-weight: 800;
+                font-size: 25px;
+                line-height: 38px;
+                color: #FFFFFF;
+            }
+            ul{
+                padding-top: 30px;
+                li{
+                    a{
+                        color: #fff;
+                        font-weight: normal;
+                        font-size: 18px;
+                        line-height: 30px;
+                        display: flex;
+                        span{
+                            color: #fff;
+                            display: block;
+                            padding-right: 10px;
+                            padding-top: 5px;
+                        }
+                    }
+                    .map{
+                        padding-bottom: 10px;
+                        max-width: 238px;
+                    }
+                    .call-two{
+                        padding: 0 0 10px 25px;
+                    }
+                    .admin{
+                        padding: 0 0 16px 25px;
+                    }
+                }
+            }
+        }
+        .footer-third-item{
+            padding-top: 15px;
+            h4{
+                font-weight: 800;
+                font-size: 25px;
+                line-height: 38px;
+                color: #FFFFFF;
+            }
+            .second-menu{
+                padding-top: 28px;
+                ul{
+                    li{
+                        a{
+                            color: #fff;
+                            font-weight: normal;
+                            font-size: 18px;
+                            line-height: 30px;
+                            display: block;
+                            transition: 0.5s;
+                            position: relative;
+                            right: 10px;
+                            padding-bottom: 5px;
+                            span{
+                                padding-right: 5px;
+                                visibility: hidden;
+                                opacity: 0;
+                            }
+                            &:hover{
+                                color: #E81D4F;
+                                right: 0;
+                                span{
+                                    visibility: visible;
+                                    opacity: 1;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .footer-four-item{
+            padding-top: 15px;
+            h4{
+                font-weight: 800;
+                font-size: 25px;
+                line-height: 38px;
+                color: #FFFFFF;
+            }
+            p{
+                font-size: 18px;
+                line-height: 30px;
+                color: #FFFFFF;
+                max-width: 256px;
+                padding: 25px 0;
+            }
+            .footer-menu{
+                li{
+                    display: inline-block;
+                    a{
+                        height: 40px;
+                        line-height: 43px;
+                        width: 40px;
+                        text-align: center;
+                        display: block;
+                        background: rgba(255, 255, 255, 0.2);
+                        color: #fff;
+                        font-size: 18px;
+                        border-radius: 50%;
+                        margin-right: 5px;
+                        transition: 0.5s;
+                        &:hover{
+                            background: #FFFFFF;
+                            color: #E81D4F;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    // footer_bottom//////
+    .footer-bottom{
+        background: #E81D4F;
+        overflow: hidden;
+        .footer-bottom-item{
+            padding: 15px 0; 
+            display: flex;
+            justify-content: space-between;
+            p{
+                color: #fff;
+                font-size: 18px;
+                line-height: 30px;
+                padding-top: 5px;
+                span{
+                    color: #fff;
+                    padding-right: 5px;
+                }
+            }
+            // footer bottom scrol button============
+            .footer-button{
+                height: 40px;
+                line-height: 40px;
+                min-width: 40px;
+                border-radius: 50%;
+                text-align: center;
+                background: #fff;
+                color: #E81D4F;
+                position: fixed;
+                right: 20px;
+                bottom: 10px;
+                transition: .5s;
+                &:hover{
+                    background: #111A39;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}

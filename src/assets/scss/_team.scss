@@ -1,0 +1,288 @@
+.team-area{
+    overflow: hidden;
+    padding-top: 120px;
+    .team-items{
+        .team-image{
+            .img-transilet{
+                overflow: hidden;
+                img{
+                    width: 100%;
+                    max-width: 100%;
+                    border-radius: 3px;
+                    transition: .5s;
+                }
+            }
+            .team-id{
+                h6{
+                    font-weight: bold;
+                    font-size: 22px;
+                    line-height: 31px;
+                    text-align: center;
+                    padding-top: 27px;
+                    transition: .5s;
+                }
+                p{
+                    text-align: center;
+                    padding-bottom: 10px;
+                }
+            }
+            .team-links{
+                li{
+                    display: inline-block;
+                    a{
+                        display: block;
+                        color: #555555;
+                        background: #E5E5E5;
+                        height: 30px;
+                        width: 30px;
+                        line-height: 33px;
+                        border-radius: 50%;
+                        text-align: center;
+                        font-size: 16px;
+                        margin-right: 10px;
+                        transition: 1s;
+                        &:hover{
+                            color: #fff;
+                            background: #E81D4F;
+                            transform: rotateY(360deg);
+                        }
+                    }
+                }
+            }
+            &:hover{
+                .img-transilet{
+                    img{
+                        transform: scale(1.1);
+                    }
+                }
+                .team-id{
+                    h6{
+                        color: #E81D4F;
+                    }
+                }
+            }
+        }
+    }
+}
+// team-h2-area
+.team-h2-area{
+    overflow: hidden;
+    background: url(../images/bg-down.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: 120px;
+    .team-items{
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 24px;
+        .team-image{
+            img{
+                width: 100%;
+                max-width: 100%;
+                border-radius: 3px;
+                
+            }
+            &::after{
+                content: " ";
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                bottom: 100%;
+                background: rgba(17, 26, 57, 0.5);
+                border-radius: 3px;
+                opacity: 0;
+                visibility: hidden;
+                transition: .5s;
+            }
+        }
+        .team-id{
+            height: 270px;
+            width: 100%;
+            background: #E81D4F;
+            display: block;
+            overflow: hidden;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -100%;
+            opacity: 0;
+            visibility: hidden;
+            transform-origin: bottom; 
+            transform: scale(0, 1);
+            transition: .5s;
+            h6{
+                font-weight: bold;
+                font-size: 22px;
+                line-height: 31px;
+                text-align: center;
+                padding-top: 27px;
+                color: #fff;
+                transition: .5s;
+            }
+            p{
+                text-align: center;
+                padding-bottom: 10px;
+                color: #fff;
+            }
+            .team-links{
+                li{
+                    display: inline-block;
+                    a{
+                        display: block;
+                        background: rgba(255, 255, 255, 0.5) ;
+                        height: 30px;
+                        width: 30px;
+                        line-height: 33px;
+                        border-radius: 50%;
+                        text-align: center;
+                        margin-right: 10px;
+                        color: #fff;
+                        font-size: 16px;
+                        transition: .5s;
+                        &:hover{
+                            color: #E81D4F;
+                            background: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover{
+            .team-image{
+                &::after{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            .team-id{
+                opacity: 1;
+                visibility: visible;
+                transform-origin: bottom; 
+                transform: scale(1, 1);
+                bottom: -120px;
+            }
+        }
+    }
+    // pricing_item_area//
+    .pricing-area{
+        background: none;
+        padding: 96px 0  0;
+    }
+}
+// h3-team-area//
+.h3-team-area{
+    overflow: hidden;
+    background-image: url(../images/bg-up.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding: 120px 0 95px;
+    .team-items{
+        position: relative;
+        overflow: hidden;
+        margin-bottom: 25px;
+        .team-image{
+            img{
+                width: 100%;
+                max-width: 100%;
+                border-radius: 3px;
+                transition: .5s;
+            }
+            &::after{
+                content: " ";
+                height: 100%;
+                width: 100%;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                background: rgba(17, 26, 57, 0.5);
+                border-radius: 3px;
+                opacity: 0;
+                visibility: hidden;
+                transition: .5s;
+            }
+        }
+        .team-id{
+            height: 270px;
+            width: 270px;
+            background: #E81D4F;
+            display: block;
+            overflow: hidden;
+            border-radius: 50%;
+            position: absolute;
+            bottom: -100%;
+            left: -20px;
+            opacity: 0;
+            visibility: hidden;
+            transform-origin: bottom; 
+            transform: scale(0, 1);
+            transition: .5s;
+            h6{
+                font-weight: bold;
+                font-size: 22px;
+                line-height: 31px;
+                text-align: center;
+                padding-top: 38px;
+                color: #fff;
+                transition: .5s;
+            }
+            p{
+                text-align: center;
+                padding-bottom: 10px;
+                color: #fff;
+            }
+            .team-links{
+                li{
+                    display: inline-block;
+                    a{
+                        display: block;
+                        background: rgba(255, 255, 255, 0.5) ;
+                        height: 30px;
+                        width: 30px;
+                        line-height: 33px;
+                        border-radius: 50%;
+                        text-align: center;
+                        margin-right: 10px;
+                        color: #fff;
+                        font-size: 16px;
+                        transition: .5s;
+                        &:hover{
+                            color: #E81D4F;
+                            background: #fff;
+                        }
+                    }
+                }
+            }
+        }
+        &:hover{
+            .team-image{
+                &::after{
+                    opacity: 1;
+                    visibility: visible;
+                }
+            }
+            .team-id{
+                opacity: 1;
+                visibility: visible;
+                transform-origin: bottom; 
+                transform: scale(1, 1);
+                bottom: -90px;
+            }
+        }
+    }
+}
+// inarea-about-page=======
+.inarea-team-area{
+    background: none;
+}
+.inarea-testimonial-area{
+    background: url(../images/bg-up.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: inherit;
+    padding-top: 85px;
+    .testimonual-main-div .client-id .item{
+        padding: 36px 12px 30px 12px !important;
+    }
+}

@@ -1,0 +1,57 @@
+.funfact-area{
+    overflow: hidden;
+    padding-top: 120px;
+    
+    .funfact-item{
+        background: #FFFFFF;
+        box-shadow: 0 10px 20px rgba(0, 35, 39, 0.1);
+        border-radius: 3px;
+        margin-bottom: 25px;
+        padding: 38px;
+        .completed{
+            font-size: 50px;
+            color: #E81D4F;
+        }
+        .funfact-text{
+            h4{
+                font-weight: 800;
+                font-size: 38px;
+                line-height: 30px;
+                padding-bottom: 15px;
+            }
+        }
+    }
+    .items-two{
+        margin-top: 50px;
+    }
+    .funfact-text-area{
+        padding-top: 95px;
+        h1{
+            font-weight: 800;
+            font-size: 107px;
+            line-height: 120px;
+            color: #E81D4F;
+
+        }
+        h2{
+            font-weight: bold;
+            font-size: 54px;
+            line-height: 40px;
+            padding-bottom: 25px;
+        }
+        .theme-btn{
+            margin-top: 30px;
+            padding: 0 32px;
+        }
+    }
+    .features-two{
+        background-image: none !important;
+        padding: 95px 0 15px;
+    }
+}
+.h2-funfact{
+    background: url(../images/bg-down.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}

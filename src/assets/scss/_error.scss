@@ -1,0 +1,39 @@
+.error-area{
+    padding: 120px 0;
+    background:  #111A39;
+    h1{
+        font-size: 200px;
+        font-weight: 700;
+        line-height: 1em;
+        color: #fff;
+        margin-top: -31px;
+        span{
+            font-size: 200px;
+            font-weight: 700;
+            line-height: 1em;
+            color: #E81D4F;
+            font-style: italic;
+        }
+    }
+    h2{
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 1.2em;
+        color: #fff;
+        margin-bottom: 20px;
+    }
+    p{
+        color: #fff;
+    }
+    .theme-btn{
+        margin: 30px 0 -8px;
+        &::before{
+            content: " ";
+            background: #fff;
+            
+        }
+        &:hover, &:focus{
+            color: #111A39;
+        }
+    }
+}

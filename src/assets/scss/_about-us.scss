@@ -1,0 +1,245 @@
+.about-area{
+    overflow: hidden;
+    padding-bottom: 120px;
+    .about-text-area{
+        position: relative;
+        top: 64px;
+        .title{
+            padding-bottom: 10px;
+            p{
+                margin: 0;
+            }
+        }
+        .driving-skills{
+            .skills-one{
+                padding-left: 10px;
+                li{
+                    font-weight: normal;
+                    font-size: 18px;
+                    line-height: 30px;
+                    letter-spacing: 0.0015em;
+                    color: #555555;
+                    display: block;
+                    padding-top: 15px;
+                    span{
+                        height: 5px;
+                        width: 5px;
+                        background: #E81D4F;
+                        display: inline-block;
+                        border-radius: 50%;
+                        position: relative;
+                        margin-right: 20px;
+                        margin-bottom: 3px;
+                        &::before{
+                            content: " ";
+                            position: absolute;
+                            top: -6px;
+                            left: -6px;
+                            border: 2px solid #E81D4F;
+                            padding: 7px;
+                            border-radius: 50%;
+                            transform: translate(0px, 0px);
+                        }
+                    }
+                }
+            }
+        }
+        .theme-btn{
+            margin-top: 34px;
+            padding: 0 35px;
+        }
+    }
+    .about-image-area{
+        position: relative;
+        .image-one{
+            position: absolute;
+            top: 70px;
+            left: 0;
+            img{
+                max-width: 100%;
+            }
+        }
+        .image-two{
+            position: absolute;
+            top: 260px;
+            right: 60px;
+            img{
+                max-width: 100%;
+            }
+        }
+        .image-three{
+            position: absolute;
+            right: -73px;
+            top: 0;
+            img{
+                max-width: 100%;
+            }
+        }
+    }
+}
+// h2-about-area
+.h2-about-area{
+    overflow: hidden;
+    padding: 110px 0 105px;
+    .images-area{
+        position: relative;
+        left: 70px;
+        .images{
+            display: inline-block;
+            img{
+                display: block;
+                max-width: 100%;
+                padding: 8px 10px;
+                width: 100%;
+                border-radius: 5px;
+            }
+        }
+        .absulet{
+            position: absolute;
+            left: -225px;
+            bottom: 232px;
+        }
+    }
+    .second-item{
+        position: relative;
+        top: 50%;
+        left: 0;
+        transform: translate(-0, -50%);
+    }
+}
+
+// h3-about-area
+.h3-about-area{
+    overflow: hidden;
+    padding-top: 85px;
+    .title h1{
+        max-width: 386px;
+    }
+    .aboutIsotop{
+        padding-top: 100px;
+        .funfact-item{
+            display: flex;
+            .completeds{
+                font-size: 50px;
+                color: #E81D4F;
+            }
+            .completed{
+                font-size: 50px;
+                color: #E81D4F;
+                padding-top: 10px;
+            }
+            .funfact-text{
+                padding: 0 0 32px 30px;
+                h4{
+                    font-weight: 800;
+                    font-size: 38px;
+                    line-height: 30px;
+                    padding-bottom: 15px;
+                }
+            }
+        }
+    }
+    .images-area{
+        position: relative;
+        display: block;
+        .images{
+            display: inline-block;
+            padding: 11px;
+            img{
+                height: 200px;
+                width: 100%;
+                max-width: 100%;
+                object-fit: cover;
+            }
+        }
+        .absulet-1{
+            position: absolute;
+            right: -24px;
+            bottom: -215px;
+        }
+        .absulet-2{
+            position: absolute;
+            right: -34px;
+            top: 224px;
+        }
+        .absulet-3{
+            position: absolute;
+            bottom: -225px;
+            right: 189px;
+        }
+    }
+}
+// About-banner-area
+.about-banner-area{
+    background: url(../images/about-banner-img.png);
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    padding: 175px 0;
+    width: 100%;
+    max-width: 100%;
+    z-index: 1;
+    &::before{
+        content: " ";
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: url(../images/about-banner-vector.png);
+        background-size: cover;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+    }
+    &::after{
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: 100%;
+        background: #111A39;
+        opacity: 0.8;
+        z-index: -1;
+    }
+    .banner-text{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        h1{
+            font-weight: 800;
+            font-size: 63px;
+            line-height: 72px;
+            color: #FFFFFF;
+            padding-bottom: 10px;
+        }
+        a{
+            color: #FFFFFF;
+            font-weight: 600;
+            transition: 0.5s;
+            span{
+                color: #FFFFFF;
+            }
+        }
+        .about-link{
+            color: #fff;
+            font-weight: 600;
+            transition: 0.5s;
+            &:hover{
+                color: #E81D4F;
+            }
+        }
+    }
+}
+// inarea-about=======
+.inarea-about{
+    padding: 110px 0 95px;
+    background: url(../images/bg-down.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    .funfact-area{
+        padding-top: 100px;
+    }
+}

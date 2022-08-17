@@ -1,0 +1,47 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("./flaticon.ttf?ec562d321170499c680363ea2a8a38ce") format("truetype"),
+url("./flaticon.woff?ec562d321170499c680363ea2a8a38ce") format("woff"),
+url("./flaticon.woff2?ec562d321170499c680363ea2a8a38ce") format("woff2"),
+url("./flaticon.eot?ec562d321170499c680363ea2a8a38ce#iefix") format("embedded-opentype"),
+url("./flaticon.svg?ec562d321170499c680363ea2a8a38ce#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-steering-wheel:before {
+    content: "\f101";
+}
+.flaticon-winner:before {
+    content: "\f102";
+}
+.flaticon-car:before {
+    content: "\f103";
+}
+.flaticon-telephone:before {
+    content: "\f104";
+}
+.flaticon-car-1:before {
+    content: "\f105";
+}
+.flaticon-email:before {
+    content: "\f106";
+}
+.flaticon-road-with-broken-line:before {
+    content: "\f107";
+}
+.flaticon-driving-school:before {
+    content: "\f108";
+}
+.flaticon-manager:before {
+    content: "\f109";
+}

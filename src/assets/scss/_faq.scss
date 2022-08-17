@@ -1,0 +1,68 @@
+.faq-area{
+    overflow: hidden;
+    background: url(../images/bg-up.png);
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-position: revert;
+    padding: 85px 0 30px;
+    .accordion{
+        width: 570px;
+        .accordion-item{
+            margin-bottom: 30px;
+            .accordion-header{
+                background: #E5E5E5;
+                border-radius: 3px 3px 0px 0px;
+                display: block;
+                position: relative;
+                border: none;
+                .accordion{
+                    font-weight: 500;
+                    font-size: 22px;
+                    line-height: 20px;
+                    letter-spacing: 0.0015em;
+                    color: #fff;
+                    background: #E81D4F;
+                    border-radius: 3px 3px 0px 0px;
+                    text-align: left;
+                    height: 50px;
+                    display: block;
+                    border: none;
+                    box-shadow: none;
+                    padding-left: 20px;
+                    &::after{
+                        content: "--";
+                        position: absolute;
+                        right: 20px;
+                        color: #fff;
+                        transform: rotate(180deg);
+                    }
+                    &.collapsed{
+                        color: #111A39;
+                        background: #E5E5E5;
+                        border-radius: 3px 3px 0px 0px;
+                        &::after{
+                            content: " +";
+                            position: absolute;
+                            right: 20px;
+                            font-size: 32px;
+                            color: #111A39;
+                            top: 6px;
+                            transform: translate(6px, 10px);
+                        }
+                    }
+                    
+                }
+            }
+        }
+        .accordion-body{
+            color: #555555;
+            font-weight: normal;
+        }
+    }
+    .faq-images{
+        img{
+            min-width: 100%;
+            height: auto;
+        }
+    }
+}

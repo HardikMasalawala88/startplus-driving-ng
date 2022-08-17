@@ -1,0 +1,95 @@
+/* Fonts */
+$pfont: 'Mukta', sans-serif;
+/*Color Variables*/ 
+$pfont: #555555; 
+$hfont: #111A39;
+// Mixins
+@mixin transition($property: all, $duration: 300ms, $animate: linear, $delay:0s){
+    transition: $property $duration $animate $delay; 
+}
+
+// Placeholder Mixins
+@mixin placeholder {
+    &.placeholder { @content; }
+    &:-moz-placeholder { @content; }
+    &::-moz-placeholder { @content; }
+    &::-webkit-input-placeholder { @content; }
+} 
+/* Button Style */
+.theme-btn{ 
+    color: #fff;  
+    text-align: center; 
+    font-weight: bold;
+    font-size: 18px;
+    display: inline-block; 
+    line-height: 49px;
+    padding: 0 20px; 
+    text-decoration: none;
+    position: relative;    
+    background: #E81D4F;
+    border-radius: 3px;   
+    z-index: 1; 
+    overflow: hidden;
+    transition: color 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    &:before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: #111A39;
+        transform-origin: right center; 
+        transform: scale(0, 1); 
+        transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+        z-index: -1;
+    } 
+    &:hover, &:focus{  
+        color: #fff;
+        &:before{ 
+            transform-origin: left center; 
+            transform: scale(1, 1);
+        }
+    }
+}
+p{
+    font-size: 18px;
+    line-height: 30px;
+}
+
+.title{
+    padding-bottom: 60px;
+    h6{
+        font-weight: normal;
+        font-size: 18px;
+        line-height: 15px;
+        color: #E81D4F;
+        padding-bottom: 20px;
+    }
+    h1{
+        font-weight: bold;
+        font-size: 54px;
+        line-height: 60px;
+        padding-bottom: 10px;
+    }
+    p{
+        max-width: 601px;
+        margin: 0 auto;
+        font-size: 18px;
+        line-height: 30px;
+    }
+}
+
+/* Preloader */ 
+.preloader{
+    position:fixed;
+    left:0px; 
+    top:0px;
+    width:100%;
+    height:100%;
+    z-index:999999;
+    background-color:#ffffff;
+    background-position:center center;
+    background-repeat:no-repeat;
+    background-image:url("../images/preloader.svg");  
+}

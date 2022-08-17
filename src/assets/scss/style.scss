@@ -1,0 +1,98 @@
+/* ------------------------------------------------------
+@File: Default Styles
+@Author:Imran khan
+@Developed By: Shorif
+@Developer URL: https://emran-khan.com
+
+This file contains the styling for the actual theme, this
+is the file you need to edit to change the look of the
+theme.
+------------------------------------------------------- */
+
+/* ======================================================
+@Template Name: Drivel Html Template
+@Author:  Imran khan
+@Default Styles
+
+// 
+
+Table of Content: 
+01/ Variables
+02/ Prefix 
+03/ Header
+04/ Banner
+05/ Features
+06/ About-us
+07/ Funfact
+08/ Courses
+09/ Driving
+10/ Gallery
+11/ Team
+12/ Pricing
+13/ testimonial
+14/ News
+15/ Faq
+16/ cleint
+17/ Find-course
+18/ contacts
+19/ error
+19/ Footer
+20/ responsive
+
+===================================================== */ 
+
+/*----------------------------------------------------*/
+@import "header";
+/*----------------------------------------------------*/
+@import "variables";
+/*----------------------------------------------------*/
+@import "banner";
+/*----------------------------------------------------*/
+@import "features";
+/*----------------------------------------------------*/ 
+@import "about-us";
+/*----------------------------------------------------*/ 
+@import "funfact";
+/*----------------------------------------------------*/ 
+@import "courses";
+/*----------------------------------------------------*/
+@import "driving";
+/*----------------------------------------------------*/ 
+@import "gallery";
+/*----------------------------------------------------*/
+@import "team";
+/*----------------------------------------------------*/
+@import "pricing";
+/*----------------------------------------------------*/ 
+@import "testimonial";
+/*----------------------------------------------------*/
+@import "news";
+/*----------------------------------------------------*/ 
+@import "faq";
+/*----------------------------------------------------*/ 
+@import "cleint";
+/*----------------------------------------------------*/
+@import "find-course";
+/*----------------------------------------------------*/
+@import "contacts";
+/*----------------------------------------------------*/
+@import "coming-soon";
+/*----------------------------------------------------*/
+@import "error";
+/*----------------------------------------------------*/ 
+@import "footer";
+/*----------------------------------------------------*/ 
+@import "prefix";
+/*----------------------------------------------------*/   
+ @import "responsive";
+/*----------------------------------------------------*/ 
+
+/*All CSS call*/ 
+@import "../css/bootstrap.min.css"; /* Bootstrap CSS */
+/* Icon CSS */
+@import "../vendors/fontawesome-pro-5.0.6/css/fontawesome-all.min.css";   
+/* Extra Plugins CSS */  
+@import "../vendors/wow-js/animate.css";    
+
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;300;400;500;600;700;800&display=swap');

@@ -1,0 +1,61 @@
+$flaticon-font: "flaticon";
+
+@font-face {
+    font-family: $flaticon-font;
+    src: url("./flaticon.ttf?ec562d321170499c680363ea2a8a38ce") format("truetype"),
+url("./flaticon.woff?ec562d321170499c680363ea2a8a38ce") format("woff"),
+url("./flaticon.woff2?ec562d321170499c680363ea2a8a38ce") format("woff2"),
+url("./flaticon.eot?ec562d321170499c680363ea2a8a38ce#iefix") format("embedded-opentype"),
+url("./flaticon.svg?ec562d321170499c680363ea2a8a38ce#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+$flaticon-map: (
+    "steering-wheel": "\f101",
+    "winner": "\f102",
+    "car": "\f103",
+    "telephone": "\f104",
+    "car-1": "\f105",
+    "email": "\f106",
+    "road-with-broken-line": "\f107",
+    "driving-school": "\f108",
+    "manager": "\f109",
+);
+
+.flaticon-steering-wheel:before {
+    content: map-get($flaticon-map, "steering-wheel");
+}
+.flaticon-winner:before {
+    content: map-get($flaticon-map, "winner");
+}
+.flaticon-car:before {
+    content: map-get($flaticon-map, "car");
+}
+.flaticon-telephone:before {
+    content: map-get($flaticon-map, "telephone");
+}
+.flaticon-car-1:before {
+    content: map-get($flaticon-map, "car-1");
+}
+.flaticon-email:before {
+    content: map-get($flaticon-map, "email");
+}
+.flaticon-road-with-broken-line:before {
+    content: map-get($flaticon-map, "road-with-broken-line");
+}
+.flaticon-driving-school:before {
+    content: map-get($flaticon-map, "driving-school");
+}
+.flaticon-manager:before {
+    content: map-get($flaticon-map, "manager");
+}
