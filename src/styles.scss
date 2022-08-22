@@ -21,19 +21,6 @@ $border-color_1: transparent;
 
 /* ------------------------------------------------------
 @File: Default Styles
-@Author:Imran khan
-@Developed By: Shorif
-@Developer URL: https://emran-khan.com
-
-This file contains the styling for the actual theme, this
-is the file you need to edit to change the look of the
-theme.
-------------------------------------------------------- */
-/* ======================================================
-@Template Name: Drivel Html Template
-@Author:  Imran khan
-@Default Styles
-
 // 
 
 Table of Content: 
@@ -851,6 +838,7 @@ p {
 }
 .about-area {
 	overflow: hidden;
+	padding-top: 150px;
 	padding-bottom: 120px;
 	.about-text-area {
 		position: relative;
@@ -3765,7 +3753,7 @@ p {
 }
 .footer-area {
 	overflow: hidden;
-	background-image: url('../../starplus-drivings/src/assets/img/footer1.jpg');
+	background-image: url('./assets/img/footer1.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: center;
