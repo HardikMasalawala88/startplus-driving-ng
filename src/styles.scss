@@ -1022,7 +1022,7 @@ p {
 		position: absolute;
 		top: 0;
 		left: 0;
-		background: url(./assets/images/about-banner-vector.png);
+		background: url(./assets/img/banner-img-one.png);
 		background-size: cover;
 		background-position: center;
 		height: 100%;
@@ -2354,7 +2354,7 @@ p {
 	background: url(./assets/images/bg-up.png);
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 120px 0 115px;
+	padding: 140px 0 115px;
 	.pricing-item {
 		background: #FFFFFF;
 		border: 1px solid #E5E5E5;
@@ -3515,7 +3515,8 @@ p {
 		display: flex;
 		padding: 0;
 		.contact-tuc-area {
-			background: url(./assets/images/tuch-bg.png);
+			height: 100%;
+			background: url(./assets/img/cus.jpg);
 			background-size: cover;
 			background-repeat: no-repeat;
 			background-position: center;

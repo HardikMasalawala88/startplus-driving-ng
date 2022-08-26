@@ -19,6 +19,13 @@ import { NewsComponent } from './news/news.component';
 import { OurClientsComponent } from './our-clients/our-clients.component';
 import { FunfactComponent } from './funfact/funfact.component';
 
+import { RouterModule } from '@angular/router';
+import { ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+
 
 @NgModule({
   declarations: [
@@ -38,10 +45,19 @@ import { FunfactComponent } from './funfact/funfact.component';
     NewsComponent,
     OurClientsComponent,
     FunfactComponent,
+
+    HomeComponent,
+    ContactusComponent,
+    PagenotfoundComponent,
+
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    RouterModule
 
   ],
   providers: [],

@@ -1,7 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { ContactusComponent } from './contactus/contactus.component';
+import { HomeComponent } from './home/home.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 
-const routes: Routes = [];
+
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  { path: 'contactus', component: ContactusComponent },
+  { path: 'PagenotfoundComponent', component: PagenotfoundComponent },
+  { path: '**', component: PagenotfoundComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

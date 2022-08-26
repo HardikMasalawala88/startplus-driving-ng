@@ -1,0 +1,54 @@
+.form {
+    padding: 20px;
+}
+
+.location {
+    iframe {
+        height: 600px;
+    }
+}
+
+.contact-tuc-area {
+    border-radius: 3px 3px 0 0;
+}
+
+.Contacts-page-area .form-all-items .form h6 {
+    font-weight: bold;
+    font-size: 38px;
+    line-height: 50px;
+    padding-bottom: 55px;
+}
+
+.Contacts-page-area .form-all-items .form .text-name input {
+    background: #F6F8FA;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    line-height: 40px;
+    margin-bottom: 20px;
+    color: #737373;
+}
+
+.Contacts-page-area .form-all-items .form textarea {
+    background: #F6F8FA;
+    border-radius: 5px;
+    width: 100%;
+    color: #737373;
+    border: none;
+    outline: none;
+    padding-left: 10px;
+    line-height: 40px;
+    height: 118px;
+    margin-bottom: 20px;
+    resize: none;
+}
+
+.Contacts-page-area .form-all-items .form .theme-btn {
+    display: block;
+    line-height: 40px;
+    padding: 0 37px;
+    border-radius: 30px;
+    width: unset;
+}
