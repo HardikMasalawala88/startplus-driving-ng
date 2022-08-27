@@ -228,7 +228,9 @@
                 <app-paypalpayment 
                 [ControlElementId]="SelectedElementId" 
                 [ControlCurrency]="SelectedCurrency" 
-                [ControlAmount]="SelectedAmount">
+                [ControlAmount]="SelectedAmount"
+                (onSuccess)="onSuccessTrigger($event)"
+                >
                 </app-paypalpayment>
             </div>
             <div class="modal-footer">

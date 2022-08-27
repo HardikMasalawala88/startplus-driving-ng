@@ -110,6 +110,15 @@ export class PricingComponent implements OnInit {
     this.displayStyle = "block";
   }
   closePopup() {
+    this.SelectedElementId = "";
+    this.SelectedAmount = "";
     this.displayStyle = "none";
+  }
+  onSuccessTrigger(data: any) {
+    // don't forget to unsubscribe
+    if(data)
+    {
+      this.closePopup();
+    }
   }
 }

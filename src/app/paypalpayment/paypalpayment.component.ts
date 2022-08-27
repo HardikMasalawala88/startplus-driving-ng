@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { render } from 'creditcardpayments/creditCardPayments'
 
 @Component({
@@ -8,6 +8,9 @@ import { render } from 'creditcardpayments/creditCardPayments'
 })
 export class PaypalpaymentComponent implements OnInit {
 
+  @Output()
+  onSuccess = new EventEmitter<any>()
+  
   @Input() ControlElementId = "";
   @Input() ControlCurrency = "";
   @Input() ControlAmount = "";
@@ -23,9 +26,12 @@ export class PaypalpaymentComponent implements OnInit {
       onApprove(details) {
         debugger
         console.log(details)
+        this.onSuccess.emit(this.form.value);
         alert("Transaction successfull");
       },
       
     })
   }
+
+   
 }
