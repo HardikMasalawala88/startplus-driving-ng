@@ -25,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { PaypalpaymentComponent } from './paypalpayment/paypalpayment.component';
 
 
 @NgModule({
@@ -49,6 +50,7 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     HomeComponent,
     ContactusComponent,
     PagenotfoundComponent,
+    PaypalpaymentComponent,
 
 
   ],

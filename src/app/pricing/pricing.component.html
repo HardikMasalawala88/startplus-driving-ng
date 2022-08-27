@@ -24,7 +24,7 @@
                             <li>Basic E-Learning Lesson ( 30 hours digital course)</li>
                             <li>In addition 10 hours In Car Training</li>
                         </ul>
-                        <a class="theme-btn" href="javascprit:void(0);">Choose Plan</a>
+                        <a class="theme-btn" (click)="openPopup('Package 1')" href="javascprit:void(0);">Choose Plan</a>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,14 @@
                             <li>Basic E-Learning Lesson (30 hours digital course) </li>
                             <li>In addition Test</li>
                         </ul>
-                        <a class="theme-btn" href="javascprit:void(0);">Choose Plan</a>
+                         <a class="theme-btn" (click)="openPopup('Package 2')" href="javascprit:void(0);">Choose Plan</a>
+                        <!-- <a class="theme-btn" href="javascprit:void(0);">
+                            <app-paypalpayment ControlElementId="plan12" ControlCurrency="USD" ControlAmount="906.57">
+
+                            </app-paypalpayment>
+                        </a> -->
+                        
+                        
                     </div>
                 </div>
             </div>
@@ -62,7 +69,7 @@
             <div class="col-lg-4 col-md-6 fadeInUpBig">
                 <div class="pricing-item text-center">
                     <div class="pricing-texts">
-                        <h6>Package 1</h6>
+                        <h6>Package 3</h6>
                         <div class="basic-price">
                             <span>$</span>
                             <h1>62.5</h1>
@@ -71,14 +78,14 @@
                         <ul class="text-center">
                             <li>1 hours Lesson</li>
                         </ul>
-                        <a class="theme-btn" href="javascprit:void(0);">Choose Plan</a>
+                        <a class="theme-btn" (click)="openPopup('Package 3')" href="javascprit:void(0);">Choose Plan</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 fadeInUpBig">
                 <div class="pricing-item text-center">
                     <div class="pricing-texts">
-                        <h6>Package 2</h6>
+                        <h6>Package 4</h6>
                         <div class="basic-price">
                             <span>$</span>
                             <h1>282.5</h1>
@@ -87,14 +94,14 @@
                         <ul class="text-center">
                             <li>2 hours Lesson & test</li>
                         </ul>
-                        <a class="theme-btn" href="javascprit:void(0);">Choose Plan</a>
+                        <a class="theme-btn" (click)="openPopup('Package 4')" href="javascprit:void(0);">Choose Plan</a>
                     </div>
                 </div>
             </div>
             <div class="col-lg-4 col-md-6 fadeInUpBig">
                 <div class="pricing-item text-center">
                     <div class="pricing-texts">
-                        <h6>Package 3</h6>
+                        <h6>Package 5</h6>
                         <div class="basic-price">
                             <span>$</span>
                             <h1>406.8</h1>
@@ -103,7 +110,7 @@
                         <ul class="text-center">
                             <li>4 hours Lesson & test</li>
                         </ul>
-                        <a class="theme-btn" href="javascprit:void(0);">Choose Plan</a>
+                        <a class="theme-btn" (click)="openPopup('Package 5')" href="javascprit:void(0);">Choose Plan</a>
                     </div>
                 </div>
             </div>
@@ -120,7 +127,7 @@
                 style="visibility: visible; animation-duration: 1.3s; animation-name: fadeInUpBig;">
                 <div class="pricing-item text-center">
                     <div class="pricing-texts">
-                        <h6>Package 1</h6>
+                        <h6>Package 6</h6>
                         <div class="basic-price">
                             <span>$</span>
                             <h1>56.50</h1>
@@ -129,7 +136,7 @@
                         <ul class="text-center">
                             <li>1 hours Lesson</li>
                         </ul>
-                        <a class="theme-btn btn" href="javascprit:void(0);">Choose Plan</a>
+                        <a class="theme-btn btn" (click)="openPopup('Package 6')" href="javascprit:void(0);">Choose Plan</a>
                     </div>
                 </div>
             </div>
@@ -137,7 +144,7 @@
                 style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInUpBig;">
                 <div class="pricing-item text-center">
                     <div class="pricing-texts">
-                        <h6>Package 2</h6>
+                        <h6>Package 7</h6>
                         <div class="basic-price">
                             <span>$</span>
                             <h1>203.4</h1>
@@ -147,7 +154,7 @@
                             <li>1 hours lesson & road test</li>
                         </ul>
 
-                        <a class="theme-btn" href="javascprit:void(0);">Choose Plan</a>
+                        <a class="theme-btn" (click)="openPopup('Package 7')" href="javascprit:void(0);">Choose Plan</a>
                     </div>
                 </div>
             </div>
@@ -155,7 +162,7 @@
                 style="visibility: visible; animation-duration: 2.1s; animation-name: fadeInUpBig;">
                 <div class="pricing-item text-center">
                     <div class="pricing-texts">
-                        <h6>Package 3</h6>
+                        <h6>Package 8</h6>
                         <div class="basic-price">
                             <span>$</span>
                             <h1>259.9</h1>
@@ -164,7 +171,7 @@
                         <ul class="text-center">
                             <li>2 hours Lesson & test</li>
                         </ul>
-                        <a class="theme-btn" href="javascprit:void(0);">Choose Plan</a>
+                        <a class="theme-btn" (click)="openPopup('Package 8')" href="javascprit:void(0);">Choose Plan</a>
                     </div>
                 </div>
             </div>
@@ -172,7 +179,7 @@
                 style="visibility: visible; animation-duration: 2.4s; animation-name: fadeInUpBig;">
                 <div class="pricing-item text-center">
                     <div class="pricing-texts">
-                        <h6>Package 4</h6>
+                        <h6>Package 9</h6>
                         <div class="basic-price">
                             <span>$</span>
                             <h1>372.9</h1>
@@ -181,7 +188,7 @@
                         <ul class="text-center">
                             <li>4 hours Lesson & test</li>
                         </ul>
-                        <a class="theme-btn" href="javascprit:void(0);">Choose Plan</a>
+                        <a class="theme-btn" (click)="openPopup('Package 9')" href="javascprit:void(0);">Choose Plan</a>
                     </div>
                 </div>
             </div>
@@ -190,3 +197,45 @@
 
 
 </section>
+<!-- <ng-template #mymodal let-modal>  
+    <div class="modal-header">  
+      <h4 class="modal-title" id="modal-basic-title">Bootstrap Modal</h4>  
+      <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">  
+        <span aria-hidden="true">?</span>  
+      </button>  
+    </div>  
+    <div class="modal-body">  
+      This is example from Javatpoint.com  
+    </div>  
+    <div class="modal-footer">  
+      <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>  
+    </div>  
+  </ng-template>   -->
+<div class="modal" [ngClass]="{'modal-backdrop': displayStyle === 'block'}" tabindex="-1" role="dialog"
+    [ngStyle]="{'display':displayStyle}">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header text-center d-block">
+                <h4 class="modal-title">Paypal payment service</h4>
+            </div>
+            <div class="modal-body" style="max-height: 600px;overflow-y: auto;">
+                <!-- <div class="bd-callout bd-callout-danger">
+                    <strong>Please do not share your confidential data with third .</strong>
+                </div> -->
+                <!-- <ng-container *ngIf="displayStyle == 'block'">
+                    
+                </ng-container> -->
+                <app-paypalpayment 
+                [ControlElementId]="SelectedElementId" 
+                [ControlCurrency]="SelectedCurrency" 
+                [ControlAmount]="SelectedAmount">
+                </app-paypalpayment>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger" (click)="closePopup()">
+                    Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>

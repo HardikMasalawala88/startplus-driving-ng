@@ -2065,6 +2065,7 @@ p {
 .team-area {
 	overflow: hidden;
 	padding-top: 120px;
+	padding-bottom: 40px;
 	.team-items {
 		.team-image {
 			.img-transilet {
@@ -5712,4 +5713,8 @@ body {
 			}
 		}
 	}
+}
+
+.modal-backdrop {
+    background-color: #000c;
 }
