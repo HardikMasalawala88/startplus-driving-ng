@@ -24,7 +24,6 @@ export class PaypalpaymentComponent implements OnInit {
       currency: this.ControlCurrency,
       value: this.ControlAmount,
       onApprove(details) {
-        debugger
         console.log(details)
         this.onSuccess.emit(this.form.value);
         alert("Transaction successfull");

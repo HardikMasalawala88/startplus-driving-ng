@@ -1,6 +1,5 @@
 <!-- Pricing-area -->
 <section class="pricing-area" id="courses">
-
     <div class="container">
         <div class="title text-center">
             <!-- <h6>((Pricing))</h6> -->
@@ -9,7 +8,7 @@
             <h6>MINSITRY APPROVED COURSES</h6> -->
         </div>
         <div class="row">
-            <div class="col-lg-6 col-md-4 wow fadeInUpBig" data-wow-duration="1.30s"
+            <div class="col-lg-6 col-md-6 wow fadeInUpBig" data-wow-duration="1.30s"
                 style="visibility: visible; animation-duration: 1.3s; animation-name: fadeInUpBig;">
                 <div class="pricing-item text-center">
                     <div class="pricing-texts">
@@ -24,12 +23,135 @@
                             <li>Basic E-Learning Lesson ( 30 hours digital course)</li>
                             <li>In addition 10 hours In Car Training</li>
                         </ul>
-                        <a class="theme-btn" (click)="openPopup('Package 1')" href="javascprit:void(0);">Choose Plan</a>
+                        <a class="theme-btn" (click)="openModal('Package 1')">Choose Plan</a>
+                        <app-purchase-form PackageName="Package 1" ></app-purchase-form>
+                        <!-- <app-custompopup id="Package 1">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Package purchase detail form</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body" *ngIf="this.exform">
+                                <form [formGroup]="exform" >
+                                    
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1"><small>First Name</small></label>
+                                        <input type="text" formControlName="fname" class="form-control" placeholder="First name">
+                                        <small *ngIf="fname.invalid && fname.touched" class="text-danger">First name is required(minimum-4)</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1"><small>Last Name</small></label>
+                                        <input type="text" formControlName="lname" class="form-control" placeholder="Last Name">
+                                        <small *ngIf="lname.invalid && lname.touched" class="text-danger">Last Name is required(minimum-4)</small>
+                                    </div> 
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1"><small>Email</small></label>
+                                        <input type="email" formControlName="email" class="form-control" placeholder="Email">
+                                        <small *ngIf="email.invalid && email.touched" class="text-danger">Email is required</small>
+                                    </div>
+                                    <div class="row mt-2 my-1 text-center">
+                                        <small><strong>Driver licence information</strong></small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1"><small>Driver Licence Number</small></label>
+                                        <input type="text" formControlName="drivinglnum" class="form-control" placeholder="Driver Licence Number">
+                                        <small *ngIf="drivinglnum.invalid && drivinglnum.touched" class="text-danger">driving license number is required</small>
+                                    </div>
+                                     
+                                    <div class="form-group row my-1">
+                                        <div class="col-sm-6">
+                                            <label for="exampleInputEmail1"><small>Issue Date</small></label>
+                                            <input type="date" formControlName="issuedate" placeholder="MM/DD/YYYY"
+                                                class="form-control">
+                                            <small *ngIf="issuedate.invalid && issuedate.touched"
+                                                class="text-danger">Issue date is required</small>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="exampleInputEmail1"><small>Expiry Date</small></label>
+                                            <input type="date" formControlName="expirydate" placeholder="MM/DD/YYYY"
+                                            class="form-control">
+                                        <small *ngIf="expirydate.invalid && expirydate.touched"
+                                            class="text-danger">Expiry date is required</small>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row my-1">
+                                        <div class="col-sm-6">
+                                            <label for="exampleInputEmail1"><small>Date of Birth</small></label>
+                                            <input type="date" formControlName="dateofbirth" placeholder="MM/DD/YYYY"
+                                            class="form-control">
+                                        <small *ngIf="dateofbirth.invalid && dateofbirth.touched" class="text-danger">Date of birth is
+                                            required</small>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="exampleInputEmail1"><small>Phone {{exform.value.phone}}</small></label>
+                                            <input type="text" id="tel" formControlName="phone" class="form-control"
+                                            placeholder="Phone"
+                                            maxlength="14" 
+                                            phoneMask 
+                                            [preValue]="exform.value.phone"  [phoneControl]="exform.controls['phone']"
+                                            [ngClass]="phone.invalid? 'errmsg' : 'validmsg'">
+                                        <small *ngIf="phone.invalid && phone.touched" class="text-danger">phone 
+                                            is required(e.g. 123-456-7890, (123) 456-7890, 123 456 7890, 123.456.7890, +1 (123) 456-7890)</small>
+                                        </div>
+                                    </div>
+                                   
+                                    <div class="row mt-2 my-1 text-center">
+                                        <small><strong>Address information</strong></small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1"><small>Street address</small></label>
+                                        <input type="text" formControlName="address" class="form-control"
+                                        class="form-control" placeholder="Street address">
+                                    <small *ngIf="address.invalid && address.touched" class="text-danger">Street
+                                        address is required</small>
+                                    </div>
+                                     
+                                    <div class="form-group row my-1">
+                                        <div class="col-sm-6">
+                                            <label for="exampleInputEmail1"><small>Town / City</small></label>
+                                            <input type="text" formControlName="city" class="form-control"
+                                                placeholder="Town / City">
+                                            <small *ngIf="city.invalid && city.touched" class="text-danger">city is
+                                                required</small>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="exampleInputEmail1"><small>State</small></label>
+                                            <input type="text" formControlName="state" class="form-control"
+                                                placeholder="State">
+                                            <small *ngIf="state.invalid && state.touched" class="text-danger">State is
+                                                required</small>
+                                        </div>
+                                    </div>
+                                    <div class="form-group row my-1">
+                                        <div class="col-sm-6">
+                                            <label for="exampleInputEmail1"><small>Country</small></label>
+                                            <input type="text" formControlName="country" class="form-control"
+                                                placeholder="Country">
+                                            <small *ngIf="country.invalid && country.touched" class="text-danger">Country is
+                                                required</small>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <label for="exampleInputEmail1"><small>Postcode / ZIP</small></label>
+                                            <input type="text" formControlName="zip" class="form-control"
+                                                placeholder="Postcode / ZIP">
+                                            <small *ngIf="zip.invalid && zip.touched" class="text-danger">Postcode is
+                                                required</small>
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="modal-footer" *ngIf="this.exform">
+                                <button type="button" class="btn btn-secondary"
+                                    (click)="closeModal('Package 1');">Close</button>
+                                <button type="button" (click)="clicksub()" [disabled]="exform.invalid"
+                                    class="btn btn-primary">Submit</button>
+                            </div>
+                        </app-custompopup> -->
                     </div>
                 </div>
             </div>
 
-            <div class="col-lg-6 col-md-4 wow fadeInUpBig" data-wow-duration="1.50s"
+            <div class="col-lg-6 col-md-6 wow fadeInUpBig" data-wow-duration="1.50s"
                 style="visibility: visible; animation-duration: 1.5s; animation-name: fadeInUpBig;">
                 <div class="pricing-item text-center">
                     <div class="pricing-texts">
@@ -44,14 +166,15 @@
                             <li>Basic E-Learning Lesson (30 hours digital course) </li>
                             <li>In addition Test</li>
                         </ul>
-                         <a class="theme-btn" (click)="openPopup('Package 2')" href="javascprit:void(0);">Choose Plan</a>
+                        <a class="theme-btn" (click)="openModal('Package 2')">Choose Plan</a>
+                        <app-purchase-form PackageName="Package 2" ></app-purchase-form>
                         <!-- <a class="theme-btn" href="javascprit:void(0);">
                             <app-paypalpayment ControlElementId="plan12" ControlCurrency="USD" ControlAmount="906.57">
 
                             </app-paypalpayment>
                         </a> -->
-                        
-                        
+
+
                     </div>
                 </div>
             </div>
@@ -78,7 +201,9 @@
                         <ul class="text-center">
                             <li>1 hours Lesson</li>
                         </ul>
-                        <a class="theme-btn" (click)="openPopup('Package 3')" href="javascprit:void(0);">Choose Plan</a>
+                       
+                            <a class="theme-btn" (click)="openModal('Package 3')">Choose Plan</a>
+                            <app-purchase-form PackageName="Package 3" ></app-purchase-form>
                     </div>
                 </div>
             </div>
@@ -94,7 +219,8 @@
                         <ul class="text-center">
                             <li>2 hours Lesson & test</li>
                         </ul>
-                        <a class="theme-btn" (click)="openPopup('Package 4')" href="javascprit:void(0);">Choose Plan</a>
+                            <a class="theme-btn" (click)="openModal('Package 4')">Choose Plan</a>
+                            <app-purchase-form PackageName="Package 4" ></app-purchase-form>
                     </div>
                 </div>
             </div>
@@ -110,7 +236,9 @@
                         <ul class="text-center">
                             <li>4 hours Lesson & test</li>
                         </ul>
-                        <a class="theme-btn" (click)="openPopup('Package 5')" href="javascprit:void(0);">Choose Plan</a>
+                        
+                            <a class="theme-btn" (click)="openModal('Package 5')">Choose Plan</a>
+                            <app-purchase-form PackageName="Package 5" ></app-purchase-form>
                     </div>
                 </div>
             </div>
@@ -136,7 +264,8 @@
                         <ul class="text-center">
                             <li>1 hours Lesson</li>
                         </ul>
-                        <a class="theme-btn btn" (click)="openPopup('Package 6')" href="javascprit:void(0);">Choose Plan</a>
+                        <a class="theme-btn" (click)="openModal('Package 6')">Choose Plan</a>
+                            <app-purchase-form PackageName="Package 6" ></app-purchase-form>
                     </div>
                 </div>
             </div>
@@ -154,7 +283,8 @@
                             <li>1 hours lesson & road test</li>
                         </ul>
 
-                        <a class="theme-btn" (click)="openPopup('Package 7')" href="javascprit:void(0);">Choose Plan</a>
+                        <a class="theme-btn" (click)="openModal('Package 7')">Choose Plan</a>
+                        <app-purchase-form PackageName="Package 7" ></app-purchase-form>
                     </div>
                 </div>
             </div>
@@ -171,7 +301,8 @@
                         <ul class="text-center">
                             <li>2 hours Lesson & test</li>
                         </ul>
-                        <a class="theme-btn" (click)="openPopup('Package 8')" href="javascprit:void(0);">Choose Plan</a>
+                        <a class="theme-btn" (click)="openModal('Package 8')">Choose Plan</a>
+                        <app-purchase-form PackageName="Package 8" ></app-purchase-form>
                     </div>
                 </div>
             </div>
@@ -188,7 +319,8 @@
                         <ul class="text-center">
                             <li>4 hours Lesson & test</li>
                         </ul>
-                        <a class="theme-btn" (click)="openPopup('Package 9')" href="javascprit:void(0);">Choose Plan</a>
+                        <a class="theme-btn" (click)="openModal('Package 9')">Choose Plan</a>
+                        <app-purchase-form PackageName="Package 9" ></app-purchase-form>
                     </div>
                 </div>
             </div>
@@ -211,21 +343,21 @@
       <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">Ok</button>  
     </div>  
   </ng-template>   -->
-<div class="modal" [ngClass]="{'modal-backdrop': displayStyle === 'block'}" tabindex="-1" role="dialog"
+<!-- <div class="modal" [ngClass]="{'modal-backdrop': displayStyle === 'block'}" tabindex="-1" role="dialog"
     [ngStyle]="{'display':displayStyle}">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header text-center d-block">
                 <h4 class="modal-title">Paypal payment service</h4>
             </div>
-            <div class="modal-body" style="max-height: 600px;overflow-y: auto;">
-                <!-- <div class="bd-callout bd-callout-danger">
+            <div class="modal-body" style="max-height: 600px;overflow-y: auto;"> -->
+<!-- <div class="bd-callout bd-callout-danger">
                     <strong>Please do not share your confidential data with third .</strong>
                 </div> -->
-                <!-- <ng-container *ngIf="displayStyle == 'block'">
+<!-- <ng-container *ngIf="displayStyle == 'block'">
                     
                 </ng-container> -->
-                <app-paypalpayment 
+<!-- <app-paypalpayment 
                 [ControlElementId]="SelectedElementId" 
                 [ControlCurrency]="SelectedCurrency" 
                 [ControlAmount]="SelectedAmount"
@@ -240,4 +372,88 @@
             </div>
         </div>
     </div>
-</div>
+</div> -->
+<!-- 
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <form [formGroup]="exform">
+                    <label class="form-label">FirstName
+                        <input type="text" formControlName="fname" class="form-control">
+                        <small *ngIf="fname.invalid && fname.touched" class="text-danger">Firstname is
+                            required(minimumlength-4)</small>
+                    </label>
+                    <label class="form-label">LastName
+                        <input type="text" formControlName="lname" class="form-control">
+                        <small *ngIf="lname.invalid && lname.touched" class="text-danger">LastName is
+                            required(minimumlength-4)</small>
+                    </label>
+                    <label class="form-label"> Driver Licence Number
+                        <input type="text" formControlName="drivinglnum" class="form-control">
+                        <small *ngIf="drivinglnum.invalid && drivinglnum.touched" class="text-danger">driving license
+                            number is required</small>
+                    </label>
+                    <label class="form-label">Issue Date
+                        <input type="text" formControlName="issuedate" placeholder="MM/DD/YYYY" class="form-control">
+                        <small *ngIf="issuedate.invalid && issuedate.touched" class="text-danger">issue date is
+                            required(only Numbers allow)</small>
+                    </label>
+                    <label class="form-label">Expiry Date
+                        <input type="text" formControlName="expirydate" placeholder="MM/DD/YYYY" class="form-control">
+                        <small *ngIf="expirydate.invalid && expirydate.touched" class="text-danger">expirydate is
+                            required(only Numbers allow)</small>
+                    </label>
+                    <label class="form-label">Date of Birth
+                        <input type="text" formControlName="dateofbirth" placeholder="MM/DD/YYYY" class="form-control">
+                        <small *ngIf="dateofbirth.invalid && dateofbirth.touched" class="text-danger">dateofbirth is required(only Numbers
+                            allow)</small>
+                    </label>
+                    <label class="form-label">Country / Region
+                         
+                        <input type="text" formControlName="Country" class="form-control" class="form-control">
+                        <small *ngIf="Country.invalid && Country.touched" class="text-danger">Country is required(only
+                            Numbers allow)</small>
+                    </label>
+                    <label class="form-label">Street address
+                        <input type="text" formControlName="address" class="form-control" class="form-control">
+                        <small *ngIf="address.invalid && address.touched" class="text-danger">address is
+                            required</small>
+                    </label>
+                    <label class="form-label">Town / City
+                        <input type="text" formControlName="city" class="form-control">
+                        <small *ngIf="city.invalid && city.touched" class="text-danger">city is required</small>
+                    </label>
+                    <label class="form-label">State
+                        <input type="text" formControlName="state" class="form-control">
+                        <small *ngIf="state.invalid && state.touched" class="text-danger">State is required</small>
+                    </label>
+                    <label class="form-label">Postcode / ZIP
+                        <input type="text" formControlName="zip" class="form-control">
+                        <small *ngIf="zip.invalid && zip.touched" class="text-danger">Postcode is required</small>
+                    </label>
+                    <label class="form-label">Phone
+                        <input type="text" formControlName="phone" class="form-control">
+                        <small *ngIf="phone.invalid && phone.touched" class="text-danger">phonenum is required(only num
+                            allow & minimum-10digit)</small>
+                    </label>
+                    <label class="form-label">Email
+                        <input type="email" formControlName="email" class="form-control">
+                        <small *ngIf="email.invalid && email.touched" class="text-danger">Email is required</small>
+                    </label>
+
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" (click)="clicksub()" [disabled]="exform.invalid"
+                    class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </div>
+
+</div> -->

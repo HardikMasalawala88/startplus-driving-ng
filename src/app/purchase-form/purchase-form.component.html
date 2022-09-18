@@ -1,0 +1,201 @@
+<app-custompopup id="{{PackageName}}">
+    <div class="modal-header">
+        <h5 class="modal-title text-center" id="exampleModalLabel">Package purchase detail form</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" (click)="closeModal(this.PackageName);"
+            aria-label="Close"></button>
+    </div>
+    <div class="modal-body" *ngIf="IsCongratulation == true">
+        <div *ngIf="ShowMailError">
+            <div class="alert alert-danger" role="alert">
+                <small class="text-danger">Server is facing issue while generating your request.
+                    Please take screen shot of this receipt and contact on <a href="mailto:mirlubna2019@yahoo.com">mirlubna2019@yahoo.com</a>
+                </small>    
+            </div>
+        </div>
+        <div #orderreceipt class="orderreceipt">
+            <div class="row text-center">
+                <h6>Starplus Drivings School</h6>
+                <h6>Thank you. Your order has been received.</h6>
+                <br />
+                <h4>PAYMENT METHOD: Pay Cash at Office or Using Interact Transfer to <b>starplusdrive@gmail.com</b></h4>
+                <br />
+                <hr />
+                <div class="d-flex justify-content-between" *ngIf="this.submittedValue.orderdate">
+                    <span><b>ORDER DATE:&nbsp;&nbsp;</b></span>
+                    <span>{{this.submittedValue.orderdate | date:'fullDate'}}</span>
+                </div>
+                <div class="d-flex justify-content-between" *ngIf="this.openPackageType.totalamount">
+                    <span><b>TOTAL ORDER AMOUNT:&nbsp;&nbsp;</b></span>
+                    <span class="mx-2">{{this.openPackageType.totalamount | currency:'CAD'}}</span>
+                </div>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <span class="col-7" *ngIf="this.submittedValue.ordernumber"><b>UNIQUE ORDER NUMBER:&nbsp;&nbsp;</b></span>
+                <span style="float: right;" class="col-5" *ngIf="this.submittedValue.ordernumber">{{this.submittedValue.ordernumber}}</span>
+                <hr />
+            </div>
+            <div class="row d-flex justify-content-between">
+                <span class="col-7" *ngIf="this.openPackageType.name"><b>Product:&nbsp;&nbsp;</b></span>
+                <span style="float: right;" class="col-5" *ngIf="this.openPackageType.name">{{this.openPackageType.name}}</span>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <span class="col-7" *ngIf="this.openPackageType.Fees"><b>Subtotal:&nbsp;&nbsp;</b></span>
+                <span style="float: right;" class="col-5 d-flex justify-content-end" *ngIf="this.openPackageType.Fees">{{this.openPackageType.Fees | currency:'CAD'}}</span>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <span class="col-7" *ngIf="this.openPackageType.MTO"><b>MTO:&nbsp;&nbsp;</b></span>
+                <span style="float: right;" class="col-5 d-flex justify-content-end" *ngIf="this.openPackageType.MTO">{{this.openPackageType.MTO | currency:'CAD'}}</span>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <span class="col-7" *ngIf="this.openPackageType.HST"><b>HST:&nbsp;&nbsp;</b></span>
+                <span style="float: right;" class="col-5 d-flex justify-content-end" *ngIf="this.openPackageType.HST">{{this.openPackageType.HST |currency:'CAD'}}</span>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <span class="col-7" *ngIf="this.openPackageType.totalamount"><b>Total:&nbsp;&nbsp;</b></span>
+                <span style="float: right;" class="col-5 d-flex justify-content-end" *ngIf="this.openPackageType.totalamount">{{this.openPackageType.totalamount | currency:'CAD'}}</span>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <span class="col-7" *ngIf="this.submittedValue.drivinglnum"><b>Driver Licence Number:&nbsp;&nbsp;</b></span>
+                <span style="float: right;" class="col-5" *ngIf="this.submittedValue.drivinglnum">{{this.submittedValue.drivinglnum}}</span>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <span class="col-7" *ngIf="this.submittedValue.issuedate"><b>Issue Date:&nbsp;&nbsp;</b></span>
+                <span style="float: right;" class="col-5" *ngIf="this.submittedValue.issuedate">{{this.submittedValue.issuedate | date:'fullDate'}}</span>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <span class="col-7" *ngIf="this.submittedValue.expirydate"><b>Expiry Date:&nbsp;&nbsp;</b></span>
+                <span style="float: right;" class="col-5" *ngIf="this.submittedValue.expirydate">{{this.submittedValue.expirydate | date:'fullDate'}}</span>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <span class="col-7" *ngIf="this.submittedValue.dateofbirth"><b>Date of Birth:&nbsp;&nbsp;</b></span>
+                <span style="float: right;" class="col-5" *ngIf="this.submittedValue.dateofbirth">{{this.submittedValue.dateofbirth | date:'fullDate'}}</span>
+            </div>
+            <div class="row d-flex justify-content-between">
+                <span class="col-7" *ngIf="this.submittedValue.zip"><b>Postcode / ZIP:&nbsp;&nbsp;</b></span>
+                <span style="float: right;" class="col-5" *ngIf="this.submittedValue.zip">{{this.submittedValue.zip}}</span>
+            </div>
+        </div>
+    
+        <div class="row">
+            <div class="col-12 text-center"><button type="button" class="mt-2 btn btn-danger"
+                    (click)="downloadReceiptPdf()">PRINT RECEIPT</button></div>
+        <div class="col-12 text-center">
+            <small>Note: Print slip for references.</small>
+        </div>   
+        </div>
+    </div>
+    <div class="modal-body" *ngIf="IsCongratulation == false">
+        <form [formGroup]="exform" >
+            <div class="form-group">
+                <label for="exampleInputEmail1"><small>First Name</small></label>
+                <input type="text" formControlName="fname" class="form-control" placeholder="First name">
+                <small *ngIf="fname.invalid && fname.touched" class="text-danger">First name is required(minimum-4)</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1"><small>Last Name</small></label>
+                <input type="text" formControlName="lname" class="form-control" placeholder="Last Name">
+                <small *ngIf="lname.invalid && lname.touched" class="text-danger">Last Name is required(minimum-4)</small>
+            </div> 
+            <div class="form-group">
+                <label for="exampleInputEmail1"><small>Email</small></label>
+                <input type="email" formControlName="email" class="form-control" placeholder="Email">
+                <small *ngIf="email.invalid && email.touched" class="text-danger">Email is required</small>
+            </div>
+            <div class="row mt-2 my-1 text-center">
+                <small><strong>Driver licence information</strong></small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1"><small>Driver Licence Number</small></label>
+                <input type="text" formControlName="drivinglnum" class="form-control" placeholder="Driver Licence Number">
+                <small *ngIf="drivinglnum.invalid && drivinglnum.touched" class="text-danger">driving license number is required</small>
+            </div>
+             
+            <div class="form-group row my-1">
+                <div class="col-sm-6">
+                    <label for="exampleInputEmail1"><small>Issue Date</small></label>
+                    <input type="date" formControlName="issuedate" placeholder="MM/DD/YYYY"
+                        class="form-control">
+                    <small *ngIf="issuedate.invalid && issuedate.touched"
+                        class="text-danger">Issue date is required</small>
+                </div>
+                <div class="col-sm-6">
+                    <label for="exampleInputEmail1"><small>Expiry Date</small></label>
+                    <input type="date" formControlName="expirydate" placeholder="MM/DD/YYYY"
+                    class="form-control">
+                <small *ngIf="expirydate.invalid && expirydate.touched"
+                    class="text-danger">Expiry date is required</small>
+                </div>
+            </div>
+            <div class="form-group row my-1">
+                <div class="col-sm-6">
+                    <label for="exampleInputEmail1"><small>Date of Birth</small></label>
+                    <input type="date" formControlName="dateofbirth" placeholder="MM/DD/YYYY"
+                    class="form-control">
+                <small *ngIf="dateofbirth.invalid && dateofbirth.touched" class="text-danger">Date of birth is
+                    required</small>
+                </div>
+                <div class="col-sm-6">
+                    <label for="exampleInputEmail1"><small>Phone</small></label>
+                    <input type="text" id="tel" formControlName="phone" class="form-control"
+                    placeholder="Phone"
+                    maxlength="14" 
+                    phoneMask 
+                    [preValue]="exform.value.phone"  [phoneControl]="exform.controls['phone']"
+                    [ngClass]="phone.invalid? 'errmsg' : 'validmsg'">
+                <small *ngIf="phone.invalid && phone.touched" class="text-danger">phone 
+                    is required(e.g. (987) 987-9879)</small>
+                </div>
+            </div>
+           
+            <div class="row mt-2 my-1 text-center">
+                <small><strong>Address information</strong></small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputEmail1"><small>Street address</small></label>
+                <input type="text" formControlName="address" class="form-control"
+                class="form-control" placeholder="Street address">
+            <small *ngIf="address.invalid && address.touched" class="text-danger">Street
+                address is required</small>
+            </div>
+             
+            <div class="form-group row my-1">
+                <div class="col-sm-6">
+                    <label for="exampleInputEmail1"><small>Town / City</small></label>
+                    <input type="text" formControlName="city" class="form-control"
+                        placeholder="Town / City">
+                    <small *ngIf="city.invalid && city.touched" class="text-danger">city is
+                        required</small>
+                </div>
+                <div class="col-sm-6">
+                    <label for="exampleInputEmail1"><small>State</small></label>
+                    <input type="text" formControlName="state" class="form-control"
+                        placeholder="State">
+                    <small *ngIf="state.invalid && state.touched" class="text-danger">State is
+                        required</small>
+                </div>
+            </div>
+            <div class="form-group row my-1">
+                <div class="col-sm-6">
+                    <label for="exampleInputEmail1"><small>Country</small></label>
+                    <input type="text" formControlName="country" class="form-control"
+                        placeholder="Country">
+                    <small *ngIf="country.invalid && country.touched" class="text-danger">Country is
+                        required</small>
+                </div>
+                <div class="col-sm-6">
+                    <label for="exampleInputEmail1"><small>Postcode / ZIP</small></label>
+                    <input type="text" formControlName="zip" class="form-control"
+                        placeholder="Postcode / ZIP">
+                    <small *ngIf="zip.invalid && zip.touched" class="text-danger">Postcode is
+                        required</small>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer" *ngIf="IsCongratulation== false">
+        <button type="button" class="btn btn-secondary"
+            (click)="closeModal(this.PackageName);">Close</button>
+        <button type="button" (click)="clicksub()" [disabled]="exform.invalid"
+            class="btn btn-primary">Submit</button>
+    </div>
+</app-custompopup>

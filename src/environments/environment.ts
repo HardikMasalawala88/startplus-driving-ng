@@ -3,7 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+  production: false,
+  mailAppURL: 'https://email-sent-service-api.herokuapp.com/api/send-contact',
+  toMail: 'mirlubna2019@yahoo.com',
+  ccMail: '',
+  addCC:true
 };
 
 /*

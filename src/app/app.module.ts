@@ -18,6 +18,8 @@ import { TestimonialComponent } from './testimonial/testimonial.component';
 import { NewsComponent } from './news/news.component';
 import { OurClientsComponent } from './our-clients/our-clients.component';
 import { FunfactComponent } from './funfact/funfact.component';
+import { FormsModule } from '@angular/forms';
+import { DatePipe,CurrencyPipe } from '@angular/common';
 
 import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -26,7 +28,10 @@ import { HomeComponent } from './home/home.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PaypalpaymentComponent } from './paypalpayment/paypalpayment.component';
-
+import { CustompopupComponent } from './custompopup/custompopup.component';
+import { PhoneMaskDirective } from './directives/phone-mask.directive';
+import { PurchaseFormComponent } from './purchase-form/purchase-form.component';
+import { ModalService } from './custompopup/modal.service';
 
 @NgModule({
   declarations: [
@@ -51,18 +56,22 @@ import { PaypalpaymentComponent } from './paypalpayment/paypalpayment.component'
     ContactusComponent,
     PagenotfoundComponent,
     PaypalpaymentComponent,
-
-
+    CustompopupComponent,
+    PhoneMaskDirective,
+    PurchaseFormComponent,
+    //DatePipe,CurrencyPipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    RouterModule
+    RouterModule,
+    FormsModule
 
   ],
-  providers: [],
+  //entryComponents: [DatePipe,CurrencyPipe],
+  providers: [ModalService,DatePipe,CurrencyPipe],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

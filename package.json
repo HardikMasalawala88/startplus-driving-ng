@@ -20,8 +20,12 @@
     "@angular/platform-browser-dynamic": "~10.2.4",
     "@angular/router": "~10.2.4",
     "creditcardpayments": "^1.0.3",
+    "html-to-pdfmake": "^2.4.6",
+    "jspdf": "^2.5.1",
     "node-modules": "^1.0.1",
+    "pdfmake": "^0.2.5",
     "rxjs": "~6.6.0",
+    "rxjs-compat": "^6.6.7",
     "tslib": "^2.0.0",
     "zone.js": "~0.10.2"
   },
