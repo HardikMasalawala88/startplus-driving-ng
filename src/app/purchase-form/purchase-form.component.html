@@ -8,7 +8,7 @@
         <div *ngIf="ShowMailError">
             <div class="alert alert-danger" role="alert">
                 <small class="text-danger">Server is facing issue while generating your request.
-                    Please take screen shot of this receipt and contact on <a href="mailto:mirlubna2019@yahoo.com">mirlubna2019@yahoo.com</a>
+                    Please take screen shot of this receipt and contact on <a href="mailto:{{globalMail}}">{{globalMail}}</a>
                 </small>    
             </div>
         </div>
@@ -144,50 +144,6 @@
                     [ngClass]="phone.invalid? 'errmsg' : 'validmsg'">
                 <small *ngIf="phone.invalid && phone.touched" class="text-danger">phone 
                     is required(e.g. (987) 987-9879)</small>
-                </div>
-            </div>
-           
-            <div class="row mt-2 my-1 text-center">
-                <small><strong>Address information</strong></small>
-            </div>
-            <div class="form-group">
-                <label for="exampleInputEmail1"><small>Street address</small></label>
-                <input type="text" formControlName="address" class="form-control"
-                class="form-control" placeholder="Street address">
-            <small *ngIf="address.invalid && address.touched" class="text-danger">Street
-                address is required</small>
-            </div>
-             
-            <div class="form-group row my-1">
-                <div class="col-sm-6">
-                    <label for="exampleInputEmail1"><small>Town / City</small></label>
-                    <input type="text" formControlName="city" class="form-control"
-                        placeholder="Town / City">
-                    <small *ngIf="city.invalid && city.touched" class="text-danger">city is
-                        required</small>
-                </div>
-                <div class="col-sm-6">
-                    <label for="exampleInputEmail1"><small>State</small></label>
-                    <input type="text" formControlName="state" class="form-control"
-                        placeholder="State">
-                    <small *ngIf="state.invalid && state.touched" class="text-danger">State is
-                        required</small>
-                </div>
-            </div>
-            <div class="form-group row my-1">
-                <div class="col-sm-6">
-                    <label for="exampleInputEmail1"><small>Country</small></label>
-                    <input type="text" formControlName="country" class="form-control"
-                        placeholder="Country">
-                    <small *ngIf="country.invalid && country.touched" class="text-danger">Country is
-                        required</small>
-                </div>
-                <div class="col-sm-6">
-                    <label for="exampleInputEmail1"><small>Postcode / ZIP</small></label>
-                    <input type="text" formControlName="zip" class="form-control"
-                        placeholder="Postcode / ZIP">
-                    <small *ngIf="zip.invalid && zip.touched" class="text-danger">Postcode is
-                        required</small>
                 </div>
             </div>
         </form>

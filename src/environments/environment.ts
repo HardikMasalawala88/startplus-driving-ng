@@ -5,9 +5,10 @@
 export const environment = {
   production: false,
   mailAppURL: 'https://email-sent-service-api.herokuapp.com/api/send-contact',
-  toMail: 'mirlubna2019@yahoo.com',
+  toMail: 'starplusdrive@gmail.com',
   ccMail: '',
-  addCC:true
+  addCC:true,
+  globalMail:'starplusdrive@gmail.com'
 };
 
 /*
